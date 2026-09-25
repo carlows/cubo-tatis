@@ -15,6 +15,14 @@ npm install
 npm run dev
 ```
 
+## PDF de entrega
+
+```bash
+npm run pdf   # genera Cubo_Seis_Caras_Evaluacion_Primer_Corte.pdf desde print.html
+```
+
+Requiere Google Chrome. La versión imprimible también queda publicada en `/print.html`.
+
 ## Despliegue
 
 `.github/workflows/deploy.yml` construye con Vite y publica `dist/` en GitHub Pages

@@ -1,0 +1,148 @@
+@page { size: letter; margin: 16mm 16mm 18mm; }
+
+:root { --ink: #2b2a33; --muted: #6b6573; --line: #e7dccb; --bg: #fbf6ee; }
+
+* { box-sizing: border-box; }
+
+html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+body {
+  margin: 0;
+  font-family: 'Nunito', system-ui, sans-serif;
+  color: var(--ink);
+  font-size: 10pt;
+  line-height: 1.45;
+  background: #fff;
+}
+
+@media screen {
+  body { background: #e9e4dc; }
+  .page { width: 216mm; min-height: 279mm; margin: 12px auto; padding: 16mm; background: #fff; box-shadow: 0 2px 12px rgba(0,0,0,.15); }
+}
+
+.page { break-after: page; }
+.page:last-child { break-after: auto; }
+
+h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; line-height: 1.2; }
+
+.kicker {
+  margin: 0;
+  font-size: 8pt;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: var(--muted);
+}
+
+/* ---------- Portada ---------- */
+.cover { text-align: center; }
+.cover .eval { margin: 4px 0 0; font-weight: 700; color: var(--muted); }
+.cover h1 { font-size: 22pt; margin: 18px auto 8px; max-width: 150mm; }
+.cover .lema { font-style: italic; color: var(--muted); margin: 0 0 18px; }
+
+.net {
+  display: grid;
+  grid-template-columns: repeat(4, 30mm);
+  grid-template-rows: repeat(3, 30mm);
+  gap: 1.5mm;
+  justify-content: center;
+  margin: 10px 0 22px;
+}
+.net-face {
+  border: 2px solid var(--c);
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--c) 14%, #fff);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1px;
+  font-size: 9pt;
+}
+.net-face .n {
+  width: 18px; height: 18px; border-radius: 50%;
+  background: var(--c); color: #fff; font-weight: 800; font-size: 8pt;
+  display: grid; place-items: center;
+}
+.net-face .i { font-size: 15pt; }
+
+.datos {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 5px 16px;
+  text-align: left;
+  width: 125mm;
+  margin: 0 auto;
+  padding: 12px 18px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+.datos dt { font-weight: 800; color: var(--muted); }
+.datos dd { margin: 0; }
+.cover .link { margin-top: 18px; font-size: 9pt; color: var(--muted); }
+a { color: #1d6f8a; }
+
+/* ---------- Caras ---------- */
+.page > header {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 0 0 10px;
+  margin-bottom: 8px;
+  border-bottom: 3px solid var(--c);
+}
+.page > header .n {
+  flex: none;
+  width: 34px; height: 34px; border-radius: 50%;
+  background: var(--c); color: #fff; font-weight: 800; font-size: 14pt;
+  display: grid; place-items: center;
+}
+.page > header h2 { margin: 1px 0 2px; font-size: 18pt; color: color-mix(in srgb, var(--c) 70%, #1d1b22); }
+.page > header .q { margin: 0; font-style: italic; color: var(--muted); }
+
+.body h3 { font-size: 11.5pt; margin: 12px 0 4px; color: color-mix(in srgb, var(--c) 70%, #1d1b22); break-after: avoid; }
+.body p { margin: 0 0 7px; }
+.body ul, .body ol { padding-left: 1.2em; margin: 4px 0 8px; }
+.body li { margin-bottom: 5px; break-inside: avoid; }
+.body li::marker { color: var(--c); font-weight: 800; }
+
+.nota {
+  background: var(--bg);
+  border-left: 4px solid var(--c);
+  padding: 7px 12px;
+  border-radius: 0 8px 8px 0;
+}
+blockquote {
+  margin: 4px 0 10px;
+  padding: 9px 14px;
+  font-family: 'Fraunces', Georgia, serif;
+  background: color-mix(in srgb, var(--c) 10%, #fff);
+  border-radius: 10px;
+}
+
+.tag {
+  display: inline-block;
+  margin-right: 6px;
+  padding: 0 7px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--c) 18%, #fff);
+  color: color-mix(in srgb, var(--c) 60%, #1d1b22);
+  font-size: 7pt;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+}
+.asociaciones, .criterios { list-style: none; padding-left: 0 !important; }
+.asociaciones li, .criterios li { padding: 4px 9px; border: 1px solid var(--line); border-radius: 8px; margin-bottom: 4px; }
+
+table { border-collapse: collapse; width: 100%; font-size: 9pt; margin: 6px 0 8px; }
+th, td { border: 1px solid var(--line); padding: 5px 7px; text-align: left; vertical-align: top; }
+thead th { background: color-mix(in srgb, var(--c) 16%, #fff); }
+tbody th { background: var(--bg); }
+tr { break-inside: avoid; }
+
+.dimensiones dt { font-weight: 800; margin-top: 7px; color: color-mix(in srgb, var(--c) 70%, #1d1b22); }
+.dimensiones dd { margin: 1px 0 0; }
+
+.refs { list-style: none; padding: 0; margin: 10px 0 0; }
+.refs li { padding-left: 2em; text-indent: -2em; margin-bottom: 9px; }

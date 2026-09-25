@@ -228,3 +228,8 @@ export const referencias = [
   'Sepúlveda-Kattan, [Inicial]. (2021). <em>[Título del artículo]</em>. <em>[Nombre de la revista]</em>, <em>[volumen]</em>([número]), [páginas]. [DOI o URL]',
 ];
 
+export const declaracionIA = `
+  <p>Utilicé <strong>Claude (Anthropic)</strong> para <strong>organizar las ideas de las semanas 3 y 4 en las seis caras del cubo, proponer una primera redacción y construir la página web interactiva</strong> donde se presenta el cubo. La empleé durante las etapas de <strong>estructuración, redacción inicial y diseño digital</strong>.</p>
+  <p>Verifiqué la información mediante <strong>las lecturas de Moodle (Sepúlveda-Kattan, 2021; Peláez Córdoba, 2023; Restrepo-Restrepo, 2022; Peralta Espinosa, 2021), los documentos del Ministerio de Educación Nacional y el texto de la Ley 1804 de 2016 y el Decreto 1411 de 2022</strong>, y reelaboré el contenido con base en mi comprensión de los temas.</p>
+  <p class="nota">La IA no se presenta como fuente bibliográfica.</p>
+`;

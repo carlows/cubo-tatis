@@ -1,4 +1,4 @@
-import { portada, caras, referencias } from './content.js';
+import { portada, caras, referencias, declaracionIA } from './content.js';
 
 // ---------- Cuaterniones mínimos para una rotación tipo "trackball" ----------
 // q = [x, y, z, w]. Las fórmulas coinciden con rotate3d() de CSS.
@@ -274,6 +274,12 @@ const extras = {
     color: '#264653',
     title: 'Referencias (APA 7.ª ed.)',
     body: `<ul class="refs">${referencias.map((r) => `<li>${r}</li>`).join('')}</ul>`,
+  }),
+  ia: () => ({
+    badge: '🤖',
+    color: '#264653',
+    title: 'Declaración de uso de Inteligencia Artificial',
+    body: declaracionIA,
   }),
 };
 

@@ -109,6 +109,31 @@ function frontFace() {
   return best;
 }
 
+// Qué cara está bajo un punto de pantalla. Se calcula con un rayo desde la
+// cámara en vez de usar el hit-testing del DOM, que falla con caras 3D
+// perfectamente alineadas (sobre todo en móviles).
+const scene = $('.scene');
+function pickFace(clientX, clientY) {
+  const r = scene.getBoundingClientRect();
+  const half = r.width / 2;
+  const P = parseFloat(getComputedStyle(scene).perspective) || r.width * 3.2;
+  const dir = [clientX - (r.left + half), clientY - (r.top + r.height / 2), -P];
+  const inv = [-q[0], -q[1], -q[2], q[3]];
+  // Rayo en coordenadas locales del cubo: cámara en (0, 0, P).
+  const o = qRotate(inv, [0, 0, P]);
+  const d = qRotate(inv, dir);
+  let best = -1, bestT = Infinity;
+  LAYOUT.forEach((f, i) => {
+    const dn = d[0] * f.n[0] + d[1] * f.n[1] + d[2] * f.n[2];
+    if (dn >= 0) return; // cara de espaldas
+    const on = o[0] * f.n[0] + o[1] * f.n[1] + o[2] * f.n[2];
+    const t = (half - on) / dn;
+    const h = o.map((v, k) => v + d[k] * t);
+    if (t > 0 && t < bestT && h.every((v) => Math.abs(v) <= half + 1)) { best = i; bestT = t; }
+  });
+  return best;
+}
+
 function snapTo(i) {
   idle = false;
   vel = { x: 0, y: 0 };
@@ -154,8 +179,7 @@ stage.addEventListener('pointerdown', (e) => {
   idle = false;
   snap = null;
   vel = { x: 0, y: 0 };
-  const face = e.target.closest('.face');
-  start = { x: e.clientX, y: e.clientY, t: performance.now(), face };
+  start = { x: e.clientX, y: e.clientY, face: pickFace(e.clientX, e.clientY) };
   last = { x: e.clientX, y: e.clientY, t: performance.now() };
   stage.classList.add('grabbing');
 });
@@ -177,9 +201,9 @@ function endDrag(e) {
   stage.classList.remove('grabbing');
   if (performance.now() - last.t > 80) vel = { x: 0, y: 0 };
   const moved = Math.hypot(e.clientX - start.x, e.clientY - start.y);
-  if (moved < 8 && start.face) {
+  if (moved < 8 && start.face >= 0) {
     vel = { x: 0, y: 0 };
-    openFace(+start.face.dataset.index);
+    openFace(start.face);
   }
 }
 window.addEventListener('pointerup', endDrag);

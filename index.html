@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="Cubo de las Seis Caras: transformaciones de las infancias y evolución de la educación infantil en Colombia y Latinoamérica." />
+  <title>Cubo de las Seis Caras</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧊</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+  <header class="top">
+    <p class="kicker" id="kicker"></p>
+    <h1 id="tema"></h1>
+  </header>
+
+  <main id="stage" aria-label="Cubo 3D: arrastra para girarlo, toca una cara para leerla">
+    <div class="scene">
+      <div id="cube" class="cube"></div>
+    </div>
+  </main>
+
+  <p class="hint">Arrastra para girar · toca una cara para leerla</p>
+
+  <nav class="faces-nav" id="faces-nav" aria-label="Caras del cubo"></nav>
+
+  <nav class="extras" aria-label="Documentos complementarios">
+    <button data-extra="portada">Portada</button>
+    <button data-extra="referencias">Referencias APA</button>
+    <button data-extra="ia">Declaración de IA</button>
+  </nav>
+
+  <dialog id="modal">
+    <article>
+      <header class="modal-head">
+        <span class="modal-badge" id="modal-badge"></span>
+        <div>
+          <h2 id="modal-title"></h2>
+          <p class="modal-q" id="modal-q"></p>
+        </div>
+        <button class="close" id="modal-close" aria-label="Cerrar">✕</button>
+      </header>
+      <div class="modal-body" id="modal-body"></div>
+      <footer class="modal-foot" id="modal-foot">
+        <button id="prev">← Anterior</button>
+        <button id="next">Siguiente →</button>
+      </footer>
+    </article>
+  </dialog>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

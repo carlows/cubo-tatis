@@ -1,7 +1,7 @@
 import { portada, caras, referencias, declaracionIA } from './content.js';
 
-// Versión imprimible del cubo: una página por sección, en el orden que pide
-// la guía (portada, seis caras, referencias, declaración de IA).
+// Versión imprimible con formato APA 7 (trabajo de estudiante), en el orden
+// que pide la guía: portada, seis caras, referencias y declaración de IA.
 const SITE = 'https://carlows.github.io/cubo-tatis/';
 
 // Posición de cada cara en el cubo desplegado (cruz de 4×3).
@@ -14,51 +14,48 @@ const NET = [
   [2, 3], // 6 Argumentación
 ];
 
-const page = (cls, inner, color) =>
-  `<section class="page ${cls}"${color ? ` style="--c:${color}"` : ''}>${inner}</section>`;
+const page = (cls, inner) => `<section class="page ${cls}">${inner}</section>`;
 
 const cover = page('cover', `
-  <p class="kicker">${portada.universidad}</p>
-  <p class="eval">${portada.evaluacion}</p>
-  <h1>${portada.tema}</h1>
-  <p class="lema">“${portada.lema}”</p>
+  <div class="cover-title">
+    <p class="titulo"><strong>${portada.tema}</strong></p>
+    <p class="subtitulo">Cubo de las Seis Caras: Análisis Tridimensional</p>
+  </div>
+  <p>${portada.estudiante}</p>
+  <p>${portada.programa}, ${portada.universidad}</p>
+  <p>${portada.asignatura}</p>
+  <p>Grupo ${portada.grupo}</p>
+  <p>${portada.docente}</p>
+  <p>${portada.fecha}</p>
+`);
+
+const figura = page('figure', `
+  <h1>El Cubo de las Seis Caras</h1>
+  <p class="fig-num"><strong>Figura 1</strong></p>
+  <p class="fig-titulo"><em>Cubo desplegado con las seis caras de análisis</em></p>
   <div class="net">
     ${caras.map((c, i) => `
-      <div class="net-face" style="--c:${c.color};grid-column:${NET[i][0]};grid-row:${NET[i][1]}">
-        <span class="n">${c.numero}</span><span class="i">${c.icono}</span><b>${c.titulo}</b>
+      <div class="net-face" style="grid-column:${NET[i][0]};grid-row:${NET[i][1]}">
+        <span class="n">Cara ${c.numero}</span><b>${c.titulo}</b>
       </div>`).join('')}
   </div>
-  <dl class="datos">
-    <dt>Estudiante</dt><dd>${portada.estudiante}</dd>
-    <dt>Asignatura</dt><dd>${portada.asignatura}</dd>
-    <dt>Programa</dt><dd>${portada.programa}</dd>
-    <dt>Grupo</dt><dd>${portada.grupo}</dd>
-    <dt>Docente</dt><dd>${portada.docente}</dd>
-    <dt>Fecha</dt><dd>${portada.fecha}</dd>
-  </dl>
-  <p class="link">Versión interactiva en 3D: <a href="${SITE}">${SITE.replace('https://', '')}</a></p>
+  <p class="fig-nota"><em>Nota.</em> Cada cara aborda el tema central desde una operación intelectual: describir, comparar, asociar, analizar, aplicar y argumentar. Versión interactiva en 3D: ${SITE}</p>
 `);
 
 const faces = caras.map((c) => page('face', `
-  <header>
-    <span class="n">${c.numero}</span>
-    <div>
-      <p class="kicker">Cara ${c.numero} de 6</p>
-      <h2>${c.icono} ${c.titulo}</h2>
-      <p class="q">${c.pregunta}</p>
-    </div>
-  </header>
+  <h1>Cara ${c.numero}. ${c.titulo}</h1>
+  <p class="pregunta"><strong>Pregunta orientadora:</strong> ${c.pregunta}</p>
   <div class="body">${c.html}</div>
-`, c.color)).join('');
+`)).join('');
 
-const refs = page('extra', `
-  <header><span class="n">📚</span><div><h2>Referencias</h2><p class="q">Formato APA 7.ª edición</p></div></header>
-  <ul class="refs">${referencias.map((r) => `<li>${r}</li>`).join('')}</ul>
-`, '#264653');
+const refs = page('refs', `
+  <h1>Referencias</h1>
+  ${referencias.map((r) => `<p class="ref">${r}</p>`).join('')}
+`);
 
-const ia = page('extra', `
-  <header><span class="n">🤖</span><div><h2>Declaración de uso de Inteligencia Artificial</h2></div></header>
+const ia = page('ia', `
+  <h1>Declaración de Uso de Inteligencia Artificial</h1>
   <div class="body">${declaracionIA}</div>
-`, '#264653');
+`);
 
-document.querySelector('#doc').innerHTML = cover + faces + refs + ia;
+document.querySelector('#doc').innerHTML = cover + figura + faces + refs + ia;

@@ -343,3 +343,10 @@ tbody th { background: var(--bg); white-space: nowrap; }
 @media (prefers-reduced-motion: reduce) {
   dialog[open] { animation: none; }
 }
+
+/* Rótulos APA de tablas dentro del modal */
+.tabla-num { margin: 16px 0 0; }
+.tabla-titulo { margin: 0 0 4px; }
+.tabla-nota { margin: 0 0 12px; font-size: 0.85rem; color: var(--muted); }
+.tabla table { margin-top: 0; }
+.rel { font-style: italic; font-weight: 700; }

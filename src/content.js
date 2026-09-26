@@ -1,6 +1,11 @@
 // Contenido del cubo. Todo el texto académico vive aquí para poder editarlo
 // sin tocar la lógica 3D. `resumen` se muestra sobre la cara del cubo;
 // `html` es el desarrollo completo que se abre al tocar la cara.
+//
+// El texto de cada cara proviene de la "Solución de la evaluación" (caras 1,
+// 4, 5 y 6 en texto; caras 2 y 3 de sus infografías), organizado según la
+// guía y con citas en formato APA 7 tomadas de los materiales de las semanas
+// 3 y 4.
 
 export const portada = {
   tema: 'Transformaciones de las infancias y evolución de la educación infantil en Colombia y Latinoamérica',
@@ -24,27 +29,21 @@ export const caras = [
     color: '#e76f51',
     pregunta: '¿Qué transformaciones centrales se estudiaron en las semanas 3 y 4?',
     resumen: [
-      'De “objeto de cuidado” a sujeto de derechos y actor social',
-      'Del asistencialismo a la atención integral',
-      'Preescolar → educación inicial → atención integral',
-      'Hitos: Ley 115 de 1994 y Ley 1804 de 2016',
+      'De receptores de asistencia a sujetos de derechos y actores sociales',
+      'Infancias diversas',
+      'Del cuidado y el bienestar a la educación inicial y la atención integral',
+      'Hitos: ICBF (1968) y Decreto 088 de 1976',
     ],
     html: `
-      <p>Durante las semanas 3 y 4 estudiamos un mismo proceso visto desde dos lados: <strong>cómo ha cambiado la manera de entender a niñas y niños</strong> y <strong>cómo ha cambiado la educación que se les ofrece</strong> en Colombia y en la región.</p>
+      <p>En estas dos semanas vimos cómo ha cambiado la manera de entender a las niñas y los niños, y cómo esos cambios transformaron la educación para la primera infancia en Colombia.</p>
 
-      <h3>Las concepciones de niño, niña e infancia</h3>
-      <p>Durante buena parte del siglo XX la infancia se pensó como una etapa de carencia: el niño era un “adulto incompleto”, frágil, que debía ser alimentado, vigilado y protegido. Esa mirada dio origen a respuestas <em>asistencialistas</em>, centradas en suplir necesidades básicas. Hoy se reconoce que niñas y niños son <strong>sujetos de derechos</strong> —titulares de derechos desde que nacen, no cuando crecen— y <strong>actores sociales</strong> que piensan, opinan, participan y transforman los contextos donde viven. Además, se entiende que no existe <em>una</em> infancia sino <em>infancias</em>, marcadas por el territorio, la cultura, la clase social y la historia latinoamericana (Sepúlveda-Kattan, 2021; Peláez Córdoba, 2023).</p>
+      <h3>Semana 3: concepciones de niño, niña e infancia</h3>
+      <p>Aprendimos que antes los niños eran vistos sobre todo como quienes “necesitaban ayuda, protección o corrección”. Predominaban miradas asistencialistas y muy centradas en el adulto. Con el tiempo, y gracias a avances como la Convención sobre los Derechos del Niño, esto cambió: hoy se reconoce a niñas y niños como <strong>sujetos de derechos</strong>, con voz, dignidad y capacidad de participar según su edad (Corte Constitucional de Colombia, 2022). Además, se les entiende como <strong>actores sociales</strong>, es decir, personas que interpretan, crean, opinan y transforman su entorno (Peláez Córdoba, 2023). También comprendimos que no existe una sola infancia, sino <strong>infancias diversas</strong> según el territorio, la cultura, la familia y las condiciones sociales (Sepúlveda-Kattan, 2021).</p>
 
-      <h3>La educación de la primera infancia</h3>
-      <p>En Colombia, la atención empezó con asilos, salas cunas y programas de protección. Con la creación del <strong>ICBF (1968)</strong> se amplió la atención a familias y niños en condición de vulnerabilidad. Más tarde, el sistema educativo incorporó la <strong>educación preescolar</strong> (Decreto 088 de 1976; Decreto 1002 de 1984), luego el <strong>grado cero</strong> y, con la <strong>Ley 115 de 1994</strong>, un grado obligatorio de preescolar. La <strong>Ley 1098 de 2006</strong> estableció la protección integral y el derecho al desarrollo integral en la primera infancia; la estrategia <strong>De Cero a Siempre</strong> y la <strong>Ley 1804 de 2016</strong> la convirtieron en política de Estado, y el <strong>Decreto 1411 de 2022</strong> reglamentó la educación inicial como derecho.</p>
+      <h3>Semana 4: evolución de la educación infantil en Colombia</h3>
+      <p>Conectamos ese cambio de mirada con la evolución de la educación infantil en Colombia. Vimos que todo comenzó con instituciones centradas en el cuidado y el bienestar, y poco a poco se fue construyendo una educación más organizada y con intención pedagógica. Aparecen hitos importantes como la creación del <strong>ICBF en 1968</strong>, que fortaleció programas para la niñez, y el <strong>Decreto 088 de 1976</strong>, que incorporó por primera vez la <strong>educación preescolar</strong> al sistema educativo (Ministerio de Educación Nacional [MEN], s.f.). Con los años surgieron currículos, jardines infantiles y modalidades comunitarias, hasta llegar a la <strong>educación inicial</strong>, que hoy tiene identidad propia (Presidencia de la República de Colombia, 2022) y se articula con la <strong>atención integral</strong>, donde educación, salud, nutrición, cuidado y protección trabajan de manera coordinada.</p>
 
-      <h3>Tres términos que no son sinónimos</h3>
-      <ul>
-        <li><strong>Educación preescolar:</strong> nivel del sistema educativo formal (prejardín, jardín y transición), ligado a la escuela.</li>
-        <li><strong>Educación inicial:</strong> proceso pedagógico intencionado para niñas y niños de 0 a 6 años, con identidad propia, basado en el juego, el arte, la literatura y la exploración del medio.</li>
-        <li><strong>Atención integral:</strong> conjunto articulado de acciones de salud, nutrición, protección, cultura y educación que garantizan el desarrollo integral; la educación inicial es una de ellas (Ley 1804, 2016).</li>
-      </ul>
-      <p class="nota">En síntesis: pasamos de <em>cuidar para sobrevivir</em> y <em>preparar para la escuela</em> a <em>educar y garantizar derechos</em> reconociendo a cada niña y niño como protagonista de su desarrollo.</p>
+      <p class="nota">En conjunto, las dos semanas muestran un cambio profundo: pasamos de ver a los niños como receptores de asistencia a reconocerlos como sujetos de derechos, y de ofrecer solo cuidado básico a construir una educación inicial sólida, respetuosa de su desarrollo y conectada con sus contextos.</p>
     `,
   },
   {
@@ -55,35 +54,45 @@ export const caras = [
     color: '#f4a261',
     pregunta: '¿Qué semejanzas y diferencias pueden establecerse entre las concepciones y modelos estudiados?',
     resumen: [
-      'Asistencia/protección vs. sujetos de derechos',
-      'Preescolar vs. inicial vs. atención integral',
+      'A. Antes: asistencia y protección · Ahora: sujetos de derechos',
+      'B. Preescolar · Educación inicial · Atención integral',
       'Semejanzas, diferencias y transformaciones',
     ],
     html: `
-      <h3>A. Semana 3 · Asistencia/protección vs. sujetos de derechos y actores sociales</h3>
+      <h3>A. Concepciones de niño, niña e infancia (Semana 3)</h3>
+      <div class="tabla">
+      <p class="tabla-num"><strong>Tabla 1</strong></p>
+      <p class="tabla-titulo"><em>De la asistencia a los derechos y la participación</em></p>
       <div class="tabla-wrap"><table>
-        <thead><tr><th></th><th>Mirada asistencial / protectora</th><th>Sujetos de derechos y actores sociales</th></tr></thead>
+        <thead><tr><th></th><th>Antes: necesitan asistencia y protección</th><th>Ahora: sujetos de derechos y actores sociales</th></tr></thead>
         <tbody>
-          <tr><th>Imagen del niño</th><td>Ser incompleto, dependiente, “menor”.</td><td>Persona completa en el presente, con capacidades, voz y agencia.</td></tr>
-          <tr><th>Papel del adulto</th><td>Decide por el niño; lo resguarda.</td><td>Garante de derechos; escucha y acompaña la autonomía progresiva.</td></tr>
-          <tr><th>Participación</th><td>Casi inexistente; el niño recibe.</td><td>Derecho a opinar y a ser tenido en cuenta según su edad y madurez.</td></tr>
-          <tr><th>Origen de la acción</th><td>Caridad, beneficencia, situación irregular.</td><td>Obligación del Estado, la familia y la sociedad (corresponsabilidad).</td></tr>
+          <tr><th>Papel del adulto</th><td>El adulto decide todo.</td><td>Niñas y niños tienen voz y participación.</td></tr>
+          <tr><th>Papel del niño</th><td>Niño receptor pasivo.</td><td>Niños como actores sociales.</td></tr>
+          <tr><th>Forma de relación</th><td>Control y corrección.</td><td>Reconocimiento de la diversidad de infancias.</td></tr>
         </tbody>
       </table></div>
-      <p><strong>Semejanza:</strong> ambas miradas reconocen que la infancia necesita cuidado y protección especial. <strong>Diferencia:</strong> en la primera, la protección se impone desde afuera; en la segunda, protección y participación van juntas. <strong>Transformación:</strong> el cuidado no desaparece, se resignifica: pasa de ser un fin en sí mismo a ser un derecho que se garantiza <em>con</em> los niños y no solo <em>para</em> ellos (Sepúlveda-Kattan, 2021).</p>
+      <p class="tabla-nota"><em>Nota.</em> Elaboración propia a partir de Sepúlveda-Kattan (2021) y Corte Constitucional de Colombia (2022).</p>
+      </div>
+      <p><strong>Semejanzas:</strong> ambas miradas buscan el bienestar infantil y reconocen la protección.</p>
+      <p><strong>Diferencias:</strong> en la mirada asistencial el adulto decide y el niño recibe; en la mirada actual el niño tiene voz, participa y es reconocido en su diversidad.</p>
+      <p><strong>Transformación:</strong> de la asistencia a los derechos y la participación.</p>
 
-      <h3>B. Semana 4 · Preescolar, educación inicial y atención integral</h3>
+      <h3>B. Modelos de educación para la primera infancia en Colombia (Semana 4)</h3>
+      <div class="tabla">
+      <p class="tabla-num"><strong>Tabla 2</strong></p>
+      <p class="tabla-titulo"><em>Educación preescolar, educación inicial y atención integral</em></p>
       <div class="tabla-wrap"><table>
         <thead><tr><th></th><th>Educación preescolar</th><th>Educación inicial</th><th>Atención integral</th></tr></thead>
         <tbody>
-          <tr><th>Qué es</th><td>Nivel del sistema educativo formal.</td><td>Proceso pedagógico intencionado, permanente y estructurado.</td><td>Conjunto de acciones intersectoriales que aseguran el desarrollo integral.</td></tr>
-          <tr><th>Edades</th><td>3 a 5 años (prejardín, jardín, transición).</td><td>Desde la gestación hasta los 6 años.</td><td>Desde la gestación hasta los 6 años (y continuidad posterior).</td></tr>
-          <tr><th>Norma clave</th><td>Ley 115 de 1994.</td><td>Ley 1804 de 2016; Decreto 1411 de 2022.</td><td>Ley 1098 de 2006; Ley 1804 de 2016.</td></tr>
-          <tr><th>Quién actúa</th><td>Instituciones educativas.</td><td>Maestras/os, agentes educativos, CDI, jardines, hogares.</td><td>Educación, salud, ICBF, cultura, familia y comunidad.</td></tr>
-          <tr><th>Riesgo</th><td>Escolarizar y adelantar la primaria.</td><td>Confundirse con cuidado o con aprestamiento.</td><td>Fragmentar las atenciones si no hay articulación.</td></tr>
+          <tr><th>Características</th><td>Sistema escolar. Grados: prejardín, jardín y transición.</td><td>Juego, arte y exploración. Para menores de 6 años.</td><td>Educación + salud + nutrición + cuidado.</td></tr>
+          <tr><th>Hito</th><td>Decreto 088 de 1976</td><td>Decreto 1411 de 2022</td><td>Ley 1804 de 2016</td></tr>
         </tbody>
       </table></div>
-      <p><strong>Semejanzas:</strong> los tres buscan el desarrollo de niñas y niños y comparten la idea de que la primera infancia es decisiva. <strong>Diferencias:</strong> el preescolar se define por su lugar en la escuela; la educación inicial, por su sentido pedagógico propio; la atención integral, por la articulación de sectores. <strong>Relación y transformación:</strong> no se reemplazan, se contienen: la atención integral incluye a la educación inicial, y el grado de transición debe dialogar con ella para garantizar tránsitos armónicos hacia la básica (Restrepo-Restrepo, 2022).</p>
+      <p class="tabla-nota"><em>Nota.</em> Elaboración propia a partir de MEN (s.f.), Presidencia de la República de Colombia (2022) y Congreso de la República de Colombia (2016).</p>
+      </div>
+      <p><strong>Semejanzas:</strong> los tres están dirigidos a la primera infancia y tienen historias institucionales relacionadas (MEN, s.f.).</p>
+      <p><strong>Diferencias:</strong> la educación preescolar forma parte de la educación formal y se organiza en grados; la educación inicial es un servicio educativo para menores de seis años con identidad pedagógica propia (Presidencia de la República de Colombia, 2022); la atención integral articula educación, salud, nutrición y cuidado. Por eso, educación inicial no es sinónimo de preescolar, y entre estos niveles aún existen discontinuidades en metodologías y prácticas (Restrepo-Restrepo, 2022).</p>
+      <p><strong>Transformación:</strong> de preescolar a educación inicial y atención integral.</p>
     `,
   },
   {
@@ -94,24 +103,23 @@ export const caras = [
     color: '#e9c46a',
     pregunta: '¿Con qué autores, pedagogos, instituciones, normas y experiencias se relacionan los contenidos?',
     resumen: [
-      'Autora: Sepúlveda-Kattan · Peláez Córdoba',
-      'Pedagogos: Montessori y Dewey',
-      'ICBF · Agustín Nieto Caballero',
-      'Ley 1804 · Decreto 1411 · Chile',
+      'Autora: Sepúlveda-Kattan (2021)',
+      'Pedagogos: Fröbel y Montessori',
+      'Instituciones: ICBF y MEN',
+      'Normas: Decreto 088/1976 y 1411/2022 · País: Chile',
     ],
     html: `
-      <p>Cada relación conecta un concepto con un referente y explica <em>por qué</em> ese referente ayuda a comprenderlo o transformarlo.</p>
+      <p class="tabla-num"><strong>Tabla 3</strong></p>
+      <p class="tabla-titulo"><em>Contribuciones a la educación inicial en Colombia: referentes que inspiran, transforman y fortalecen la infancia</em></p>
       <ul class="asociaciones">
-        <li><span class="tag">Autor contemporáneo (S3)</span><strong>Infancias situadas ↔ Sepúlveda-Kattan (2021).</strong> Su análisis social de las infancias latinoamericanas permite entender que la desigualdad, la migración o la ruralidad producen formas distintas de vivir la infancia; por eso no se puede educar con un modelo único.</li>
-        <li><span class="tag">Autor contemporáneo (S3)</span><strong>Agencia infantil ↔ Peláez Córdoba (2023).</strong> Relaciona la agencia de niñas y niños con la cultura y el territorio colombiano: el niño actúa y aporta a su comunidad, lo que respalda la idea de actor social.</li>
-        <li><span class="tag">Pedagogo histórico (S4)</span><strong>Autonomía progresiva ↔ María Montessori.</strong> El ambiente preparado y la libertad con límites anticipan lo que hoy llamamos autonomía progresiva: el adulto organiza el entorno para que el niño decida y actúe por sí mismo.</li>
-        <li><span class="tag">Pedagogo histórico (S4)</span><strong>Participación ↔ John Dewey.</strong> Su idea de “aprender haciendo” y de la escuela como experiencia democrática se conecta con la voz y la participación infantil: se aprende a participar participando.</li>
-        <li><span class="tag">Pedagogo histórico (S4)</span><strong>Juego como actividad rectora ↔ Friedrich Fröbel y Ovide Decroly.</strong> Fröbel dio valor educativo al juego con el kindergarten; Decroly propuso los centros de interés. Ambos sustentan que la educación inicial parte de los intereses del niño y no de asignaturas.</li>
-        <li><span class="tag">Actor colombiano</span><strong>Escuela Activa ↔ Agustín Nieto Caballero.</strong> Con el Gimnasio Moderno (1914) apropió en Colombia las ideas de Decroly y la Escuela Nueva: el niño como centro del proceso, lo que abrió camino a una pedagogía no memorística.</li>
-        <li><span class="tag">Institución colombiana</span><strong>Del asistencialismo a la atención integral ↔ ICBF.</strong> Nació (1968) con un enfoque de protección y nutrición; con el tiempo sus modalidades (hogares comunitarios, CDI) se integraron a la estrategia De Cero a Siempre, mostrando la transición de asistir a garantizar derechos.</li>
-        <li><span class="tag">Norma</span><strong>Educación inicial como derecho ↔ Ley 1804 de 2016.</strong> Convierte De Cero a Siempre en política de Estado y define la educación inicial como proceso pedagógico con identidad propia dentro de la atención integral.</li>
-        <li><span class="tag">Norma</span><strong>Calidad y garantía ↔ Decreto 1411 de 2022.</strong> Reglamenta la prestación de la educación inicial, lo que obliga a que deje de ser un “programa” y se garantice como derecho de niñas y niños menores de seis años.</li>
-        <li><span class="tag">País latinoamericano</span><strong>Currículo propio para la primera infancia ↔ Chile.</strong> Las Bases Curriculares de la Educación Parvularia y la creación de una Subsecretaría específica muestran otro camino regional para dar identidad pedagógica al nivel; Peralta Espinosa (2021) invita a este diálogo curricular latinoamericano. También Uruguay (Plan CAIF) articula educación, salud y familia.</li>
+        <li><span class="tag">Autora contemporánea (Semana 3)</span><strong>Sepúlveda-Kattan (2021).</strong> Su trabajo sobre la sociología de la infancia latinoamericana ayuda a comprender que las concepciones de niño y niña no son universales, sino que dependen del contexto social, cultural y territorial. Gracias a ella entendemos que reconocer a los niños como sujetos de derechos y actores sociales implica mirar sus vidas desde sus propias realidades, no desde modelos impuestos.</li>
+        <li><span class="tag">Pedagogo histórico (Semana 4)</span><strong>Friedrich Fröbel.</strong> Con su propuesta del Kindergarten, mostró que la educación infantil debía tener espacios y materiales propios, donde el juego fuera el centro del aprendizaje. Su idea transformó la visión del niño como receptor pasivo en un niño activo que aprende haciendo.</li>
+        <li><span class="tag">Pedagoga histórica (Semana 4)</span><strong>María Montessori.</strong> Aportó la idea del ambiente preparado, donde el niño desarrolla autonomía y aprende a través de la exploración. Su enfoque se conecta con la educación inicial actual, que promueve la autonomía, la observación y el respeto por los ritmos individuales.</li>
+        <li><span class="tag">Institución colombiana</span><strong>Instituto Colombiano de Bienestar Familiar (ICBF).</strong> Creado en 1968, marcó un hito al organizar programas de nutrición, cuidado y protección infantil. Representa el paso del asistencialismo hacia una atención más estructurada y educativa, base de la actual atención integral (MEN, s.f.).</li>
+        <li><span class="tag">Institución colombiana</span><strong>Ministerio de Educación Nacional (MEN).</strong> Ha sido clave en la consolidación de la educación preescolar y la educación inicial. A través de decretos y orientaciones curriculares, fortaleció la dimensión pedagógica y la formación docente, impulsando una visión más integral del desarrollo infantil (MEN, s.f.).</li>
+        <li><span class="tag">Norma o hito</span><strong>Decreto 088 de 1976.</strong> Incorporó el preescolar al sistema educativo formal colombiano, reconociendo la educación de los niños pequeños como parte esencial del sistema escolar. Este decreto transformó la atención infantil en una etapa educativa con propósito pedagógico (MEN, s.f.).</li>
+        <li><span class="tag">Norma o hito</span><strong>Decreto 1411 de 2022.</strong> Reglamentó la educación inicial como servicio educativo para menores de seis años, definiendo su organización y responsabilidades. Consolidó la idea de que los primeros años tienen valor educativo propio y no son solo preparación para la primaria (Presidencia de la República de Colombia, 2022).</li>
+        <li><span class="tag">País latinoamericano</span><strong>Chile (Peralta Espinosa, 2021).</strong> El estudio comparativo de Peralta Espinosa (2021) sobre las políticas curriculares de Chile, Ecuador, México y Uruguay muestra cómo los países latinoamericanos han desarrollado sus propios modelos de educación infantil. Su trabajo permite comparar y entender que, al igual que Colombia, Chile busca currículos contextualizados que respondan a la diversidad cultural y territorial.</li>
       </ul>
     `,
   },
@@ -123,32 +131,37 @@ export const caras = [
     color: '#2a9d8f',
     pregunta: '¿Cómo se compone la transformación estudiada y qué factores la hicieron posible?',
     resumen: [
-      'Dimensiones: histórica, pedagógica, institucional',
-      'Normativa y de política pública · Latinoamericana',
-      'Tres relaciones de causa, transformación y continuidad',
+      'Dimensiones histórica, pedagógica e institucional',
+      'Normativa y de política pública',
+      'Latinoamericana',
+      'Relaciones de causa, transformación y continuidad',
     ],
     html: `
-      <h3>Dimensiones de la transformación</h3>
+      <p><strong>Transformación de la educación infantil en Colombia y Latinoamérica</strong></p>
       <dl class="dimensiones">
-        <dt>Histórica</dt>
-        <dd>Urbanización, trabajo femenino y pobreza crearon, a mediados del siglo XX, la necesidad de lugares donde cuidar a los niños. La respuesta inicial fue asistencial porque el problema se leyó como carencia.</dd>
-        <dt>Pedagógica</dt>
-        <dd>Fröbel, Montessori, Decroly y Dewey pusieron al niño en el centro del aprendizaje. En Colombia, Agustín Nieto Caballero trajo esas ideas con la Escuela Activa, sembrando la base de una pedagogía propia para la infancia.</dd>
-        <dt>Institucional</dt>
-        <dd>Del asilo y la sala cuna se pasó al ICBF, a los hogares comunitarios, al preescolar en la escuela y luego a los CDI y a la articulación intersectorial de De Cero a Siempre.</dd>
-        <dt>Normativa y de política pública</dt>
-        <dd>La Convención sobre los Derechos del Niño (1989), ratificada por Colombia en 1991, y la Constitución de 1991 (art. 44) cambiaron el marco. Siguieron la Ley 115 de 1994, la Ley 1098 de 2006, la Ley 1804 de 2016 y el Decreto 1411 de 2022.</dd>
-        <dt>Latinoamericana</dt>
-        <dd>Países como Chile, Uruguay, México y Ecuador construyeron currículos y sistemas para la primera infancia; el intercambio regional muestra que la identidad del nivel se construye desde la diversidad cultural de la región (Peralta Espinosa, 2021).</dd>
-      </dl>
+        <dt>1. Dimensión histórica</dt>
+        <dd>La transformación de la educación infantil comenzó cuando la infancia se entendía desde el asistencialismo y el cuidado básico. Con el paso del tiempo, los cambios sociales y laborales impulsaron la creación de instituciones para atender a los niños pequeños. La fundación del ICBF en 1968 marcó el inicio de una atención más organizada, y el Decreto 088 de 1976 integró el preescolar al sistema educativo (MEN, s.f.). Estos avances reflejan cómo las necesidades sociales y económicas llevaron a una evolución desde el bienestar hacia una educación formal y estructurada.</dd>
 
-      <h3>Relaciones que explican el cambio</h3>
-      <ol class="relaciones">
-        <li><strong>Causa:</strong> la Convención de 1989 y la Constitución de 1991 → la Ley 1098 de 2006. Al reconocer los derechos de los niños como prevalentes, el Estado ya no podía seguir tratándolos desde la “situación irregular”; el Código de Infancia sustituyó el Código del Menor y trajo la protección integral.</li>
-        <li><strong>Transformación:</strong> la experiencia fragmentada de programas (ICBF, preescolar escolar, salud por separado) → De Cero a Siempre y Ley 1804 de 2016. La evidencia de que las atenciones sueltas no garantizaban el desarrollo llevó a organizarlas alrededor del niño mediante la Ruta Integral de Atenciones.</li>
-        <li><strong>Continuidad:</strong> las ideas de la Escuela Activa (juego, interés, experiencia) → las actividades rectoras de la educación inicial (juego, arte, literatura y exploración del medio). La política actual no inventa desde cero: retoma un siglo de pedagogía activa y le da estatus de derecho.</li>
-        <li><strong>Tensión que permanece:</strong> la Ley 115 ubicó el preescolar dentro de la escuela, lo que favorece la cobertura pero mantiene el riesgo de “escolarizar” la infancia; por eso el Decreto 1411 de 2022 insiste en el sentido propio de la educación inicial (Restrepo-Restrepo, 2022).</li>
-      </ol>
+        <dt>2. Dimensión pedagógica</dt>
+        <dd>Las ideas de Fröbel, Montessori, Decroly y Dewey transformaron la forma de enseñar. Se pasó de una educación centrada en la transmisión de contenidos a una basada en la experiencia, el juego y la autonomía. En Colombia, Agustín Nieto Caballero adaptó estas ideas con la Escuela Activa.
+          <br><span class="rel">Causa:</span> las nuevas corrientes pedagógicas internacionales inspiraron una educación más participativa.
+          <br><span class="rel">Continuidad:</span> esas bases siguen presentes en la educación inicial actual, que valora el juego, el arte y la exploración.</dd>
+
+        <dt>3. Dimensión institucional</dt>
+        <dd>La educación infantil se consolidó gracias a la acción de instituciones como el ICBF y el Ministerio de Educación Nacional. El ICBF fortaleció programas de nutrición y cuidado, mientras el MEN estructuró el nivel preescolar y promovió la formación docente (MEN, s.f.).
+          <br><span class="rel">Causa:</span> la necesidad de coordinación entre sectores.
+          <br><span class="rel">Transformación:</span> la atención infantil dejó de ser solo asistencial y se convirtió en un servicio educativo con identidad pedagógica.</dd>
+
+        <dt>4. Dimensión normativa y de política pública</dt>
+        <dd>Las normas fueron clave para formalizar los avances. El Decreto 088 de 1976 incorporó el preescolar al sistema educativo (MEN, s.f.); la Ley 1804 de 2016 (De Cero a Siempre) consolidó la atención integral como política de Estado (Congreso de la República de Colombia, 2016); y el Decreto 1411 de 2022 reglamentó la educación inicial como servicio educativo (Presidencia de la República de Colombia, 2022).
+          <br><span class="rel">Causa:</span> la necesidad de garantizar derechos y continuidad educativa.
+          <br><span class="rel">Continuidad:</span> las normas reflejan el paso de la asistencia al reconocimiento del valor educativo de los primeros años.</dd>
+
+        <dt>5. Dimensión latinoamericana</dt>
+        <dd>En el contexto regional, autoras como Victoria Peralta Espinosa, educadora chilena, mostraron que cada país ha construido sus propios modelos de educación infantil. Su análisis comparativo evidencia que los currículos deben ser contextualizados y responder a la diversidad cultural y territorial (Peralta Espinosa, 2021).
+          <br><span class="rel">Causa:</span> la influencia de los debates internacionales y la búsqueda de identidad latinoamericana.
+          <br><span class="rel">Transformación:</span> la educación infantil dejó de copiar modelos europeos y empezó a construir referentes propios.</dd>
+      </dl>
     `,
   },
   {
@@ -159,23 +172,23 @@ export const caras = [
     color: '#457b9d',
     pregunta: '¿Cómo se traduce lo aprendido en la práctica del Licenciado en Educación Infantil?',
     resumen: [
-      'Situación: CDI con familias campesinas y migrantes',
-      'Niñas y niños como participantes',
-      'Cuidado + intención pedagógica',
-      'Articulación con familia y comunidad',
+      'Situación: niños de 4 años observan la lluvia',
+      'Participación e intención pedagógica',
+      'Cuidado y acción educativa',
+      'Diversidad, familias y atención integral',
     ],
     html: `
-      <h3>La situación</h3>
-      <p>En un Centro de Desarrollo Infantil de un municipio de Cundinamarca asisten 20 niñas y niños de 3 a 4 años, varios de familias campesinas y algunos de familias venezolanas migrantes. Las familias piden que “les enseñen las vocales y a escribir el nombre” para que lleguen preparados al colegio. En la jornada, el tiempo se va en rutinas de alimentación, aseo y descanso, y los niños casi no tienen espacios para proponer.</p>
+      <h3>Situación pedagógica</h3>
+      <p>En un jardín infantil, el grupo de niños de 4 años llega al aula después de observar la lluvia en el patio. Varias niñas y niños comentan lo que vieron: unos hablan de los charcos, otros del sonido del agua y uno menciona que en su casa la lluvia entra por el techo.</p>
 
-      <h3>Cómo actuaría la licenciada</h3>
+      <h3>Actuación del licenciado</h3>
       <ul class="criterios">
-        <li><span class="tag">Participantes</span>Abre asambleas cortas para preguntar a los niños qué les gustaría explorar. Surgen las gallinas de la finca de un compañero y las arepas que cocinan en casa. Sus ideas se convierten en el punto de partida del proyecto.</li>
-        <li><span class="tag">Intencionalidad pedagógica</span>Planea experiencias con propósito claro (lenguaje oral, pensamiento, exploración del medio), usando el juego, el arte, la literatura y la exploración, y registra lo que observa para hacer seguimiento al desarrollo.</li>
-        <li><span class="tag">Cuidado vs. acción educativa</span>No elimina las rutinas: las vuelve experiencias educativas. En el almuerzo los niños conversan, sirven, cuentan; en el aseo se promueve la autonomía. El cuidado es necesario, pero no es todo lo que ocurre en el CDI.</li>
-        <li><span class="tag">Familia y comunidad</span>Explica a las familias que la lectura y la escritura se preparan con conversación, cuentos y juego, no con planas. Las invita a contar recetas y relatos de su región y de Venezuela; articula con el puesto de salud para el seguimiento nutricional.</li>
-        <li><span class="tag">Pertinencia con el contexto</span>Usa elementos del territorio (semillas, animales, alimentos, canciones de ambos países) y reconoce la diversidad cultural del grupo como recurso, no como obstáculo.</li>
-        <li><span class="tag">Identidad propia</span>Defiende que la educación inicial no es un “pre-colegio”: su meta es el desarrollo integral y el disfrute del presente, tal como plantean la Ley 1804 de 2016 y el Decreto 1411 de 2022.</li>
+        <li><span class="tag">Niñas y niños como participantes</span>El profesor no impone un tema; por el contrario, a través de diversas preguntas incorpora a los niños en la actividad y los hace partícipes, para que de manera autónoma entiendan que son sujetos de derechos capaces de identificar e interpretar su entorno.</li>
+        <li><span class="tag">Intencionalidad pedagógica</span>El profesor decide aprovechar ese momento para construir una experiencia significativa: observar cómo cae el agua y, a partir de ello, construir una actividad en la que se aprecia la intencionalidad pedagógica.</li>
+        <li><span class="tag">Cuidado y acción educativa</span>La experiencia también considera fundamental el bienestar de los niños: participan disfrutando de la lluvia de manera segura, estando secos y cómodos. El cuidado acompaña la experiencia, mientras la acción educativa se encuentra en la observación, las preguntas y la interpretación del entorno.</li>
+        <li><span class="tag">Pertinencia con el contexto</span>Cuando uno de los niños menciona que la lluvia entra por su techo, se abre un tema importante: reconocer que la infancia es diversa y que cada niño vive una realidad distinta (Sepúlveda-Kattan, 2021). La conversación se adapta para que todos puedan compartir sus experiencias sin invisibilizar ni juzgar las de los demás.</li>
+        <li><span class="tag">Familia, comunidad y otros sectores</span>El docente puede articular esta información contando a las familias la experiencia que se vivió en la institución e invitándolas, si lo desean, a compartir una imagen o un pequeño relato. De esta manera, si se evidencia alguna situación, se puede remitir a servicios comunitarios o institucionales, entendiendo que la atención integral implica coordinar educación, cuidado y protección (Congreso de la República de Colombia, 2016).</li>
+        <li><span class="tag">Identidad pedagógica propia</span>La experiencia parte de lo que los niños observan y comentan, y no de contenidos escolares impuestos: el aporte del licenciado sigue siendo pedagógico aun cuando participa en la atención integral.</li>
       </ul>
     `,
   },
@@ -187,49 +200,48 @@ export const caras = [
     color: '#6d597a',
     pregunta: '¿Qué postura académica puede defenderse frente a la evolución de la educación infantil?',
     resumen: [
-      'Tesis: identidad pedagógica propia',
-      'Tres argumentos fundamentados',
-      'Reto: escolarización y desigualdad territorial',
+      'Tesis: campo pedagógico con identidad propia',
+      'Tres argumentos: infancias, pedagogía, normas',
+      'Reto: aplicar la identidad pedagógica',
       'Conclusión',
     ],
     html: `
       <blockquote>“La educación infantil no puede reducirse al cuidado ni a la preparación para la primaria; requiere una identidad pedagógica propia y una atención articulada con las realidades de las infancias.”</blockquote>
 
       <h3>Tesis</h3>
-      <p>Estoy de acuerdo con la afirmación. La educación infantil es un campo pedagógico con sentido propio: educa en el presente a niñas y niños que son sujetos de derechos, y solo puede cumplir ese propósito si se articula con la salud, la familia, la cultura y el territorio.</p>
+      <p>La educación infantil debe reconocerse como un campo pedagógico con identidad propia, porque su propósito no es solo cuidar ni preparar para la primaria, sino acompañar el desarrollo integral de niñas y niños desde sus experiencias, contextos y derechos.</p>
 
       <h3>Argumentos</h3>
       <ol>
-        <li><strong>Reducirla al cuidado niega que los niños son sujetos de derechos.</strong> Si solo se alimenta y se vigila, se vuelve a la lógica asistencial. La Ley 1098 de 2006 reconoce el derecho al desarrollo integral en la primera infancia y la Ley 1804 de 2016 define la educación inicial como un proceso pedagógico intencionado, no como custodia.</li>
-        <li><strong>Reducirla a preparar para la primaria desconoce cómo aprenden los niños.</strong> Desde Fröbel, Montessori, Decroly y Dewey sabemos que la primera infancia aprende jugando, explorando y experimentando. Adelantar planas y contenidos escolares rompe con esa tradición y convierte la infancia en un tiempo de espera; la articulación con la básica debe hacerse cuidando los tránsitos, no anticipándolos (Restrepo-Restrepo, 2022).</li>
-        <li><strong>Sin articulación con las realidades, la educación infantil no llega a todas las infancias.</strong> Las infancias latinoamericanas están atravesadas por desigualdad, ruralidad, conflicto y migración (Sepúlveda-Kattan, 2021). Una propuesta uniforme excluye; por eso la atención integral y el diálogo curricular con la cultura y el territorio (Peralta Espinosa, 2021; Peláez Córdoba, 2023) son condiciones de calidad.</li>
+        <li><strong>Las infancias son diversas.</strong> Sepúlveda-Kattan (2021) señala que las infancias son diversas y deben comprenderse desde sus realidades sociales y culturales. Esto implica que el docente no actúa únicamente como cuidador, sino como un mediador que promueve participación, autonomía y aprendizaje significativo.</li>
+        <li><strong>Transformación pedagógica y metodológica.</strong> Pedagogos como Fröbel y Montessori demostraron que el juego, la exploración y la libertad son esenciales para el aprendizaje temprano. Sus aportes inspiran la educación inicial actual, centrada en la experiencia, la curiosidad y el protagonismo infantil.</li>
+        <li><strong>Evolución institucional y normativa en Colombia.</strong> El Decreto 088 de 1976 integró el preescolar al sistema educativo (MEN, s.f.), y el Decreto 1411 de 2022 reconoció la educación inicial como servicio educativo (Presidencia de la República de Colombia, 2022). Estas normas consolidan una visión en la que el cuidado se articula con la pedagogía y la atención integral, fortaleciendo la identidad del campo y reconociendo el valor educativo de los primeros años.</li>
       </ol>
 
       <h3>Reto actual</h3>
-      <p>En Colombia persisten brechas entre lo urbano y lo rural en el acceso y la calidad de la educación inicial, y en muchas instituciones el grado de transición sigue funcionando como “primero adelantado”. El reto es que la educación inicial llegue con calidad a los territorios rurales y dispersos sin perder su identidad frente a la presión por resultados escolares.</p>
+      <p>Uno de los retos actuales en Colombia y Latinoamérica es lograr que esta identidad pedagógica se aplique realmente en las instituciones. Persisten prácticas centradas en el asistencialismo o en la preparación escolar, lo que exige formación docente continua y políticas que garanticen coherencia entre teoría y práctica.</p>
 
       <h3>Conclusión</h3>
-      <p>La historia muestra que avanzamos del asilo a la atención integral y del niño “menor” al niño sujeto de derechos. Mantener ese avance exige licenciadas y licenciados que defiendan la especificidad pedagógica del nivel, escuchen a los niños y trabajen de la mano con familias y comunidades.</p>
+      <p>La educación infantil es un espacio de formación, participación y desarrollo integral, no una etapa de transición. Su evolución demuestra que cuidar y educar son acciones complementarias, pero distintas, y que reconocer la diversidad de las infancias es esencial para construir una educación más humana, pertinente y transformadora.</p>
     `,
   },
 ];
 
-// Referencias APA 7. Las fuentes de Moodle tienen campos entre corchetes que
-// deben completarse con los datos exactos de cada lectura.
+// Referencias APA 7 (orden alfabético, sangría francesa en la vista).
+// Datos tomados tal como aparecen en los materiales de las semanas 3 y 4.
 export const referencias = [
-  'Congreso de la República de Colombia. (1994, 8 de febrero). <em>Ley 115 de 1994, por la cual se expide la Ley General de Educación</em>. Diario Oficial No. 41.214.',
-  'Congreso de la República de Colombia. (2006, 8 de noviembre). <em>Ley 1098 de 2006, por la cual se expide el Código de la Infancia y la Adolescencia</em>. Diario Oficial No. 46.446.',
-  'Congreso de la República de Colombia. (2016, 2 de agosto). <em>Ley 1804 de 2016, por la cual se establece la política de Estado para el Desarrollo Integral de la Primera Infancia de Cero a Siempre y se dictan otras disposiciones</em>. Diario Oficial No. 49.953.',
-  'Ministerio de Educación Nacional. (2014). <em>El sentido de la educación inicial</em> (Serie de orientaciones pedagógicas para la educación inicial en el marco de la atención integral, Documento No. 20). MEN.',
-  'Ministerio de Educación Nacional. (2022). <em>Decreto 1411 de 2022, por el cual se subroga la Sección 2 del Capítulo 1, Título 3, Parte 3, Libro 2 del Decreto 1075 de 2015 y se reglamenta la prestación del servicio de educación inicial</em>. MEN.',
-  'Peláez Córdoba, [Inicial]. (2023). <em>[Título del artículo]</em>. <em>[Nombre de la revista]</em>, <em>[volumen]</em>([número]), [páginas]. [DOI o URL]',
-  'Peralta Espinosa, M. V. (2021). <em>[Título del artículo o libro]</em>. <em>[Revista o editorial]</em>. [DOI o URL]',
-  'Restrepo-Restrepo, [Inicial]. (2022). <em>[Título del artículo]</em>. <em>[Nombre de la revista]</em>, <em>[volumen]</em>([número]), [páginas]. [DOI o URL]',
-  'Sepúlveda-Kattan, [Inicial]. (2021). <em>[Título del artículo]</em>. <em>[Nombre de la revista]</em>, <em>[volumen]</em>([número]), [páginas]. [DOI o URL]',
+  'Congreso de la República de Colombia. (2016). <em>Ley 1804 de 2016. Política de Estado para el Desarrollo Integral de la Primera Infancia De Cero a Siempre</em>.',
+  'Corte Constitucional de Colombia. (2022). <em>Sentencia SU-180 de 2022</em>.',
+  'Ministerio de Educación Nacional. (s.f.). <em>Historia de la educación infantil y orientaciones para el grado transición</em>.',
+  'Peláez Córdoba, L. (2023). La construcción de la infancia en Guapi: Desarrollo infantil y agencia desde una perspectiva cultural. <em>Infancias Imágenes</em>.',
+  'Peralta Espinosa, V. (2021). <em>Análisis comparativo curricular para la primera infancia en América Latina: Estudio comparativo en Chile, Ecuador, México y Uruguay</em>. IIPE UNESCO, Oficina para América Latina y el Caribe.',
+  'Presidencia de la República de Colombia. (2022). <em>Decreto 1411 de 2022. Por medio del cual se reglamenta la prestación del servicio de educación inicial en Colombia</em>.',
+  'Restrepo-Restrepo, N. (2022). Educación infantil en Colombia: Análisis sobre la articulación entre los niveles educativos. <em>Revista Colombiana de Educación</em>, (84), 1–18. https://doi.org/10.17227/rce.num84-11317',
+  'Sepúlveda-Kattan, N. (2021). Sociología de la infancia y América Latina como su lugar de enunciación. <em>Íconos. Revista de Ciencias Sociales</em>, <em>70</em>, 133–150. https://doi.org/10.17141/iconos.70.2021.4438',
 ];
 
 export const declaracionIA = `
-  <p>Utilicé <strong>Claude (Anthropic)</strong> para <strong>organizar las ideas de las semanas 3 y 4 en las seis caras del cubo, proponer una primera redacción y construir la página web interactiva</strong> donde se presenta el cubo. La empleé durante las etapas de <strong>estructuración, redacción inicial y diseño digital</strong>.</p>
-  <p>Verifiqué la información mediante <strong>las lecturas de Moodle (Sepúlveda-Kattan, 2021; Peláez Córdoba, 2023; Restrepo-Restrepo, 2022; Peralta Espinosa, 2021), los documentos del Ministerio de Educación Nacional y el texto de la Ley 1804 de 2016 y el Decreto 1411 de 2022</strong>, y reelaboré el contenido con base en mi comprensión de los temas.</p>
+  <p>Utilicé <strong>Claude (Anthropic)</strong> para <strong>organizar las respuestas que elaboré para las seis caras según la estructura de la guía, revisar la ubicación de las citas y el formato de las referencias conforme a las normas APA 7, y construir la página web interactiva del cubo</strong>. La empleé durante las etapas de <strong>organización del contenido, revisión de formato y diseño digital</strong>.</p>
+  <p>Verifiqué la información mediante <strong>las lecturas y documentos de Moodle de las semanas 3 y 4 (Sepúlveda-Kattan, 2021; Peláez Córdoba, 2023; Restrepo-Restrepo, 2022; Peralta Espinosa, 2021; MEN, s.f.; Presidencia de la República de Colombia, 2022)</strong>, y el contenido de cada cara corresponde a mi comprensión de los temas.</p>
   <p class="nota">La IA no se presenta como fuente bibliográfica.</p>
 `;

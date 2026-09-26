@@ -1,5 +1,14 @@
 import { portada, caras, referencias, declaracionIA } from './content.js';
 
+const asset = (path) => import.meta.env.BASE_URL + path;
+const esc = (t) => t.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+
+// Contenido completo de una cara: la imagen original o sus párrafos.
+const cuerpo = (c) =>
+  c.imagen
+    ? `<a href="${asset(c.imagen)}" target="_blank" rel="noopener"><img class="cara-img" src="${asset(c.imagen)}" alt="${c.alt}" /></a>`
+    : c.parrafos.map((p) => `<p>${esc(p)}</p>`).join('');
+
 // ---------- Cuaterniones mínimos para una rotación tipo "trackball" ----------
 // q = [x, y, z, w]. Las fórmulas coinciden con rotate3d() de CSS.
 const qAxis = (x, y, z, deg) => {
@@ -72,7 +81,9 @@ caras.forEach((c, i) => {
     </div>
     <h2>${c.titulo}</h2>
     <p class="face-q">${c.pregunta}</p>
-    <ul>${c.resumen.map((r) => `<li>${r}</li>`).join('')}</ul>
+    ${c.imagen
+      ? `<img class="face-img" src="${asset(c.imagen)}" alt="" draggable="false" />`
+      : `<div class="face-text">${esc(c.parrafos[0])}</div>`}
     <span class="face-cta">Toca para leer →</span>`;
   cube.appendChild(face);
 
@@ -243,7 +254,7 @@ function openFace(i) {
     color: c.color,
     title: `Cara ${c.numero} · ${c.titulo}`,
     question: c.pregunta,
-    body: c.html,
+    body: cuerpo(c),
     pager: true,
   });
   snapTo(i);

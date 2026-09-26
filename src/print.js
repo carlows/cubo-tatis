@@ -2,17 +2,8 @@ import { portada, caras, referencias, declaracionIA } from './content.js';
 
 // Versión imprimible con formato APA 7 (trabajo de estudiante), en el orden
 // que pide la guía: portada, seis caras, referencias y declaración de IA.
-const SITE = 'https://carlows.github.io/cubo-tatis/';
-
-// Posición de cada cara en el cubo desplegado (cruz de 4×3).
-const NET = [
-  [2, 2], // 1 Descripción (centro)
-  [3, 2], // 2 Comparación
-  [4, 2], // 3 Asociación
-  [1, 2], // 4 Análisis
-  [2, 1], // 5 Aplicación
-  [2, 3], // 6 Argumentación
-];
+const asset = (path) => import.meta.env.BASE_URL + path;
+const esc = (t) => t.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
 const page = (cls, inner) => `<section class="page ${cls}">${inner}</section>`;
 
@@ -29,23 +20,21 @@ const cover = page('cover', `
   <p>${portada.fecha}</p>
 `);
 
-const figura = page('figure', `
-  <h1>El Cubo de las Seis Caras</h1>
-  <p class="fig-num"><strong>Figura 1</strong></p>
-  <p class="fig-titulo"><em>Cubo desplegado con las seis caras de análisis</em></p>
-  <div class="net">
-    ${caras.map((c, i) => `
-      <div class="net-face" style="grid-column:${NET[i][0]};grid-row:${NET[i][1]}">
-        <span class="n">Cara ${c.numero}</span><b>${c.titulo}</b>
-      </div>`).join('')}
-  </div>
-  <p class="fig-nota"><em>Nota.</em> Cada cara aborda el tema central desde una operación intelectual: describir, comparar, asociar, analizar, aplicar y argumentar. Versión interactiva en 3D: ${SITE}</p>
-`);
+// Las imágenes originales se rotulan como figuras (APA 7).
+let fig = 0;
+const cuerpo = (c) =>
+  c.imagen
+    ? `<div class="figura">
+         <p class="fig-num"><strong>Figura ${++fig}</strong></p>
+         <p class="fig-titulo"><em>${c.alt}</em></p>
+         <img class="cara-img" src="${asset(c.imagen)}" alt="${c.alt}" />
+       </div>`
+    : c.parrafos.map((p) => `<p>${esc(p)}</p>`).join('');
 
 const faces = caras.map((c) => page('face', `
   <h1>Cara ${c.numero}. ${c.titulo}</h1>
   <p class="pregunta"><strong>Pregunta orientadora:</strong> ${c.pregunta}</p>
-  <div class="body">${c.html}</div>
+  <div class="body">${cuerpo(c)}</div>
 `)).join('');
 
 const refs = page('refs', `
@@ -58,4 +47,4 @@ const ia = page('ia', `
   <div class="body">${declaracionIA}</div>
 `);
 
-document.querySelector('#doc').innerHTML = cover + figura + faces + refs + ia;
+document.querySelector('#doc').innerHTML = cover + faces + refs + ia;
